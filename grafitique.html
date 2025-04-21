@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grafitique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0faff;
+      color: #333;
+    }
+
+    header {
+      background-color: #00bcd4;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-family: "Lobster", cursive;
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-open nav {
+      display: flex;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+
+    .contact-section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      color: #00bcd4;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    .contact-form button,
+    .whatsapp-btn {
+      background-color: #00bcd4;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      font-family: inherit;
+    }
+
+    .contact-form button:hover {
+      background-color: #0097a7;
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+      margin-top: 0.5rem;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128c7e;
+    }
+
+    footer {
+      background-color: #00bcd4;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Grafitique</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">الخدمات</a>
+      <a href="#">معرض الأعمال</a>
+      <a href="#">تواصل</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2>تواصل معي</h2>
+    <p>هل لديك مشروع أو فكرة تصميم؟ يسعدني سماعك!</p>
+    <form class="contact-form">
+      <input type="text" placeholder="الاسم الكامل" required />
+      <input type="email" placeholder="البريد الإلكتروني" required />
+      <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+      <button type="submit">إرسال</button>
+      <a href="https://wa.me/970594089552" target="_blank">
+        <button type="button" class="whatsapp-btn">التواصل عبر واتساب</button>
+      </a>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 7Nadid - جميع الحقوق محفوظة
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.body.classList.toggle("nav-open");
+    }
+  </script>
+
+</body>
+</html>
